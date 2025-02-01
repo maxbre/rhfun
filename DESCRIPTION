@@ -3,7 +3,7 @@ Title: A new mixed collection of my handy R functions (the reboot of an old pack
 Version: 0.0.1
 Authors@R: 
     person("massimo", "bressan", , "massimo.bressan@arpa.veneto.it", role = c("aut", "cre"))
-Description: A new mixed collection of my handy R functions (the reboot of an old package).
+Description: A new mixed collection of my handy R functions (the reboot of an old package)
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
