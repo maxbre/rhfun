@@ -1,5 +1,5 @@
 Package: rhfun
-Title: A new mixed collection of my handy R functions (the reboot of an old package).
+Title: A new mixed collection of my handy R functions (the reboot of an old package)
 Version: 0.0.1
 Authors@R: 
     person("massimo", "bressan", , "massimo.bressan@arpa.veneto.it", role = c("aut", "cre"))
