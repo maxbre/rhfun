@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-A new mixed collection of my handy R functions (reboot of an old
+A new mixed collection of my handy R functions (the reboot of an old
 package).
 
 Beware: all the material must be considered experimental, in full

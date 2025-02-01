@@ -1,9 +1,9 @@
 Package: rhfun
-Title: R handy functions (a personal collection of utilities)
-Version: 0.0.0.9000
+Title: A new mixed collection of my handy R functions (the reboot of an old package).
+Version: 0.0.1
 Authors@R: 
     person("massimo", "bressan", , "massimo.bressan@arpa.veneto.it", role = c("aut", "cre"))
-Description: A mix of things not yet fully defined.
+Description: A new mixed collection of my handy R functions (the reboot of an old package).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
