@@ -3,8 +3,12 @@ Title: R handy functions: the new collection
 Version: 0.0.1
 Authors@R: 
     person("massimo", "bressan", , "massimo.bressan@arpa.veneto.it", role = c("aut", "cre"))
-Description: A new collection of my handy R functions. The reboot of an old package.
+Description: A new collection of my handy R functions. The reboot of an
+    old package of mine.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports:
+    magrittr,
+    tibble

@@ -3,4 +3,4 @@
 ^LICENSE\.md$
 ^README\.Rmd$
 ^test_develop$
-^data_raw$
+^data-raw$
