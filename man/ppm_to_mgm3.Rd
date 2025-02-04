@@ -24,4 +24,5 @@ convert from ppm to mg/m3
 \examples{
 NO2 <- 46
 ppm_to_mgm3(ppm = 100, mw = 46, temp = 293, press = 1013)
+
 }

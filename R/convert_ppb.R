@@ -31,7 +31,8 @@ ppb_to_ugm3 <- function(ppb, mw, temp = 293.15, press = 1013) {
     stop("Molecular weight, temperature, and pressure must be greater than zero.")
   }
 
-  # calculate molar volume dynamically (Ideal Gas Law at given temp & pressure)
+  # standard molar volume 22.41 L/mol at 0°C (273.15K) and 1 atm (1013 hPa)
+  # adjust the standard molar volume based on temperature and pressure
   Vm <- (22.41 * (temp / 273.15) * (1013 / press))
 
   # convert ppb to µg/m³
@@ -74,10 +75,12 @@ ugm3_to_ppb <- function(ugm3, mw, temp = 293.15, press = 1013) {
     stop("Molecular weight, temperature, and pressure must be greater than zero.")
   }
 
-  # compute molar volume dynamically
+  # standard molar volume 22.41 L/mol at 0°C (273.15K) and 1 atm (1013 hPa)
+  # adjust the standard molar volume based on temperature and pressure
   Vm <- 22.41 * (temp / 273.15) * (1013 / press)
 
   # convert µg/m³ to ppb
   ppb <- ugm3 * Vm / mw
   return(ppb)
-}
+
+  }
