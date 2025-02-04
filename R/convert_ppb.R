@@ -15,21 +15,25 @@
 #' NO2 <- 46
 #' ppb_to_ugm3(ppb = 100, mw = 46, temp = 293, press = 1013)
 
-# old version, less explicit and no error checking
-# #ppb_to_ugm3 <- function(ppb, mw, temp = 293.15, press = 1013) {
-#   ugm3 <- ppb * mw / (22.41 * temp / 273.15 * 1013 / press)
-#   ugm3
-# }
-
 ppb_to_ugm3 <- function(ppb, mw, temp = 293.15, press = 1013) {
 
-  # validate inputs
+  # check all inputs are numeric
   if (!is.numeric(ppb) || !is.numeric(mw) || !is.numeric(temp) || !is.numeric(press)) {
-    stop("All inputs must be numeric.")
+    stop("All inputs must be numeric vectors or scalars.")
   }
-  if (mw <= 0 || temp <= 0 || press <= 0) {
-    stop("Molecular weight, temperature, and pressure must be greater than zero.")
-  }
+
+  # check all values are positive
+  if (any(ppb <= 0)) stop("Concentration [ppb] must be greater than zero.")
+  if (any(mw <= 0)) stop("Molecular weight must be greater than zero.")
+  if (any(temp <= 0)) stop("Temperature must be greater than zero.")
+  if (any(press <= 0)) stop("Pressure must be greater than zero.")
+
+  # recycle shorter vectors to match the longest (for fully vectorization)
+  max_length <- max(length(ppb), length(mw), length(temp), length(press))
+  ppb  <- rep(ppb, length.out = max_length)
+  mw    <- rep(mw, length.out = max_length)
+  temp  <- rep(temp, length.out = max_length)
+  press <- rep(press, length.out = max_length)
 
   # standard molar volume 22.41 L/mol at 0°C (273.15K) and 1 atm (1013 hPa)
   # adjust the standard molar volume based on temperature and pressure
@@ -67,13 +71,23 @@ ppb_to_ugm3 <- function(ppb, mw, temp = 293.15, press = 1013) {
 
 ugm3_to_ppb <- function(ugm3, mw, temp = 293.15, press = 1013) {
 
-  # validate inputs
+  # check all inputs are numeric
   if (!is.numeric(ugm3) || !is.numeric(mw) || !is.numeric(temp) || !is.numeric(press)) {
-    stop("All inputs must be numeric.")
+    stop("All inputs must be numeric vectors or scalars.")
   }
-  if (mw <= 0 || temp <= 0 || press <= 0) {
-    stop("Molecular weight, temperature, and pressure must be greater than zero.")
-  }
+
+  # check all values are positive
+  if (any(ugm3 <= 0)) stop("Concentration [ugm3] must be greater than zero.")
+  if (any(mw <= 0)) stop("Molecular weight must be greater than zero.")
+  if (any(temp <= 0)) stop("Temperature must be greater than zero.")
+  if (any(press <= 0)) stop("Pressure must be greater than zero.")
+
+  # recycle shorter vectors to match the longest (for fully vectorization)
+  max_length <- max(length(ugm3), length(mw), length(temp), length(press))
+  ugm3  <- rep(ugm3, length.out = max_length)
+  mw    <- rep(mw, length.out = max_length)
+  temp  <- rep(temp, length.out = max_length)
+  press <- rep(press, length.out = max_length)
 
   # standard molar volume 22.41 L/mol at 0°C (273.15K) and 1 atm (1013 hPa)
   # adjust the standard molar volume based on temperature and pressure
