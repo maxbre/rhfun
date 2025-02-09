@@ -16,6 +16,11 @@ knitr::opts_chunk$set(
 # rhfun <img src="man/figures/sticker_2.png" align="right" height="139" />
 
 <!-- badges: start -->
+[![Version](https://img.shields.io/badge/devel%20version-0.0.1-blue.svg)](https://github.com/maxbre/rhfun)
+[![Code size](https://img.shields.io/github/languages/code-size/maxbre/rhfun.svg)](https://github.com/maxbre/rhfun)
+[![Stages](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
 <!-- badges: end -->
 
 The new collection of my <span style="color: red;">**R**</span> <span style="color: red;">**h**</span>andy <span style="color: red;">**fun**</span>ctions.
