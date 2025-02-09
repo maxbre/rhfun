@@ -97,3 +97,99 @@ wind_sect_to_deg <- function(wind_sect) {
   # Return the result vector
   return(result)
 }
+
+#' convert wind direction and wind speed to u and v components
+#'
+#' @description
+#' this function converts wind direction and wind speed to u and v components
+#'
+#' Some specifications about the function code
+#' Why in the code function there is a negative sign in ws?
+#' Because of Wind Direction Convention:
+#' Wind direction (wd) is given as the direction from which the wind is coming, measured in degrees clockwise from North (0°).
+#' U and V components represent the wind vector pointing in the direction the wind is blowing.
+#' Wind direction is measured from where the wind originates, but sine and cosine functions assume an angle that indicates where the wind is going.
+#' Without the negative sign, the computed vector would point in the opposite direction, which is incorrect.
+#'
+#' @param wd a vector of wind directions
+#' @param ws a vector of wind speeds
+#'
+#' @return
+#' a matrix
+#'
+#' @seealso \code{\link{uv_to_wdws}}
+#'
+#' @author
+#' credits to Tim Appelhans
+#' https://raw.githubusercontent.com/environmentalinformatics-marburg/Rsenal/master/R/wdws2uv.R
+#'
+#' @examples
+#' set.seed(123)
+#' wd <- as.integer(rnorm(10, 180, 90))
+#'
+#' set.seed(123)
+#' ws <- rnorm(10, 4, 1)
+#'
+#' ## convert to u and v
+#' wdws_to_uv(wd, ws)
+#'
+#' ## convert back
+#' uv <- wdws_to_uv(wd, ws)
+#' uv_to_wdws(uv[, 1], uv[, 2])
+#'
+#' @export
+
+wdws_to_uv <- function(wd, ws) {
+
+  radians <- function(degrees) degrees * pi / 180
+  u <- -ws * sin(radians(wd))
+  v <- -ws * cos(radians(wd))
+  return(cbind(u, v))
+
+}
+
+#' convert u and v components to wind direction and wind speed
+#'
+#' @description
+#' this function converts u and v components to wind direction and wind speed
+#'
+#' @param u a vector of u components
+#' @param v a vector of v components
+#'
+#' @return
+#' a matrix
+#'
+#' @seealso \code{\link{wdws_to_uv}}
+#'
+#' @author
+#' Credits to Tim Appelhans
+#' https://raw.githubusercontent.com/environmentalinformatics-marburg/Rsenal/master/R/uv2wdws.R
+#'
+#' @examples
+#' set.seed(123)
+#' wd <- as.integer(rnorm(10, 180, 90))
+#'
+#' set.seed(123)
+#' ws <- rnorm(10, 4, 1)
+#'
+#' ## convert to u and v
+#' wdws_to_uv(wd, ws)
+#'
+#' ## convert back
+#' uv <- wdws_to_uv(wd, ws)
+#' uv_to_wdws(uv[, 1], uv[, 2])
+#'
+#' @export
+
+uv_to_wdws <- function(u,v) {
+
+  degrees <- function(radians) 180 * radians / pi
+
+  mathdegs <- degrees(atan2(v, u))
+  wdcalc <- ifelse(mathdegs > 0, mathdegs, mathdegs + 360)
+  wd <- ifelse(wdcalc < 270, 270 - wdcalc, 270 - wdcalc + 360)
+  ws <- sqrt(u^2 + v^2)
+
+  return(cbind(wd, ws))
+
+}

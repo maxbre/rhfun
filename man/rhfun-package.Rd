@@ -6,6 +6,8 @@
 \alias{rhfun-package}
 \title{rhfun: R handy functions: the new collection}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 A new collection of my handy R functions. The reboot of an old package of mine.
 }
 \author{
