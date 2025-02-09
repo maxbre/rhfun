@@ -17,7 +17,7 @@ a matrix
 \description{
 this function converts wind direction and wind speed to u and v components
 
-Some specifications about the function code
+Some specifications about the function code.
 Why in the code function there is a negative sign in ws?
 Because of Wind Direction Convention:
 Wind direction (wd) is given as the direction from which the wind is coming, measured in degrees clockwise from North (0°).
