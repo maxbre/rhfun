@@ -2,8 +2,10 @@
 
 export(car_to_deg)
 export(car_to_deg_N)
+export(dd_to_dms)
 export(deg_to_car)
 export(deg_to_rad)
+export(dms_to_dd)
 export(mgm3_to_ppm)
 export(ppb_to_ugm3)
 export(ppm_to_mgm3)
