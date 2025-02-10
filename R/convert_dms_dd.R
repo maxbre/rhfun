@@ -41,7 +41,6 @@ dms_to_dd <- function(s) {
 }
 
 
-
 #' From decimal degrees to degrees, minutes, seconds
 #'
 #' Convert degrees minutes seconds to decimal degrees
@@ -55,11 +54,12 @@ dms_to_dd <- function(s) {
 #' dd_to_dms(30.25556)      # Expected: "30d 15m 20.00s"
 
 dd_to_dms <- function(dd) {
+
   # Ensure input is numeric
   if (!is.numeric(dd)) stop("Input must be a numeric vector.")
 
   # Extract sign, degrees, minutes, and seconds
-  sign_val <- ifelse(dd < 0, "-", "")  # Preserve negative sign
+  sign_value <- sign(dd)  # Keep track of sign
   dd <- abs(dd)  # Work with absolute values
 
   degrees <- floor(dd)  # Extract degrees
@@ -67,21 +67,23 @@ dd_to_dms <- function(dd) {
   seconds <- round((dd - degrees - minutes / 60) * 3600, 2)  # Extract seconds
 
   # Correct rounding issues where seconds become 60
-  fix_indices <- which(seconds == 60)
+  fix_indices <- which(seconds >= 60)
   if (length(fix_indices) > 0) {
     seconds[fix_indices] <- 0
     minutes[fix_indices] <- minutes[fix_indices] + 1
   }
 
-  fix_indices <- which(minutes == 60)
+  fix_indices <- which(minutes >= 60)
   if (length(fix_indices) > 0) {
     minutes[fix_indices] <- 0
     degrees[fix_indices] <- degrees[fix_indices] + 1
   }
 
+  # Apply sign to degrees only at the end
+  degrees <- sign_value * degrees
+
   # Construct formatted output
-  dms <- paste0(sign_val, degrees, "d ", minutes, "m ", seconds, "s")
+  dms <- paste0(degrees, "d ", minutes, "m ", seconds, "s")
 
   dms
-
 }
