@@ -2,6 +2,7 @@
 
 export(car_to_deg)
 export(car_to_deg_N)
+export(date_to_yday)
 export(dd_to_dms)
 export(deg_to_car)
 export(deg_to_rad)
@@ -15,4 +16,5 @@ export(uv_to_wdws)
 export(wdws_to_uv)
 export(wind_deg_to_sect)
 export(wind_sect_to_deg)
+export(yday_to_date)
 importFrom(magrittr,"%>%")
