@@ -2,6 +2,7 @@
 
 export(car_to_deg)
 export(car_to_deg_N)
+export(coord_convert)
 export(date_to_yday)
 export(dd_to_dms)
 export(deg_to_car)

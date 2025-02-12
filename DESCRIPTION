@@ -13,4 +13,5 @@ Imports:
     magrittr,
     tibble,
     lubridate,
-    stringr
+    stringr,
+    sf
