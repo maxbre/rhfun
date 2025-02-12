@@ -21,4 +21,9 @@ It is internally also taking care of the conversion from input angles as degrees
 \examples{
 deg <- c(0, 30, 45, 60, 90, 180, 270, 360)
 deg_to_car(deg)
+deg_to_car(0)      # Expected: (1, 0)
+deg_to_car(90)     # Expected: (0, 1)
+deg_to_car(180)    # Expected: (-1, 0)
+deg_to_car(270)    # Expected: (0, -1)
+deg_to_car(45, 2)  # Expected: (√2, √2)
 }

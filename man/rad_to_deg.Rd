@@ -7,10 +7,10 @@
 rad_to_deg(rad)
 }
 \arguments{
-\item{rad}{a numeric vector of radians}
+\item{rad}{numeric vector of radians}
 }
 \value{
-a numeric vector of corresponding angle degrees
+numeric vector of corresponding angle degrees
 }
 \description{
 Convert radians to angle degrees
@@ -18,4 +18,8 @@ Convert radians to angle degrees
 \examples{
 rad <- c(0, pi/6, pi/4, pi/3, pi/2, pi, 3/2*pi, 2*pi)
 rad_to_deg(rad)
+rad_to_deg(pi)     # Expected: 180
+rad_to_deg(pi / 2) # Expected: 90
+rad_to_deg(pi / 4) # Expected: 45
+rad_to_deg(2 * pi) # Expected: 360
 }

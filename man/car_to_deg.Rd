@@ -29,4 +29,12 @@ y = r * sin(phi)
 x <- c(1, 1, 0, -1, -1, -1,  0,  1)
 y <- c(0, 1, 1,  1,  0, -1, -1, -1)
 car_to_deg(x, y)
+car_to_deg(1, 1)   # Expected: 45 degrees
+car_to_deg(0, 1)   # Expected: 90 degrees
+car_to_deg(-1, 1)  # Expected: 135 degrees
+car_to_deg(-1, 0)  # Expected: 180 degrees
+car_to_deg(-1, -1) # Expected: 225 degrees
+car_to_deg(0, -1)  # Expected: 270 degrees
+car_to_deg(1, -1)  # Expected: 315 degrees
+car_to_deg(1, 0)   # Expected: 0 degrees
 }
