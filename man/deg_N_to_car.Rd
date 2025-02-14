@@ -16,8 +16,7 @@ a tibble with degrees, phi in radians, x and y
 }
 \description{
 Convert from the North direction in angles degrees (i.e. the compass direction) to the cartesian coordinates x and y
-#' What is r?
-It defines how far the point is from the origin (0,0)
+The function is using r as input parameter. What is it? It defines how far the point is from the origin (0,0)
 If r = 1 (default), the function converts only the direction (angle) into Cartesian coordinates.
 If r > 1, it scales the coordinates proportionally.
 If r < 1, it shrinks the coordinates proportionally.

@@ -1,5 +1,6 @@
 #' Angle degrees to radians
 #'
+#' @description
 #' Convert angles degrees to radians
 #'
 #' @param deg numeric vector of angles degrees
@@ -29,6 +30,7 @@ deg_to_rad <- function(deg) {
 
 #' Radians to angle degrees
 #'
+#' @description
 #' Convert radians to angle degrees
 #'
 #' @param rad numeric vector of radians
@@ -58,7 +60,8 @@ rad_to_deg <- function(rad) {
 
 #' Cartesian x, y to angle degrees
 #'
-#' Convert Cartesian coordinates x and y to angle degrees
+#'@description
+#'Convert cartesian coordinates x and y to angle degrees.
 #'
 #' By approaching the problem with the use of complex numbers (strange enough but it's easier!)
 #' If z = x + i*y with real x and y
@@ -69,10 +72,8 @@ rad_to_deg <- function(rad) {
 #'
 #' @param x a numeric vector of x coordinates in the Cartesian plane
 #' @param y a numeric vector of y coordinates in the Cartesian plane
-#'
 #' @return a numeric vector of corresponding angle degrees (anticlockwise direction)
 #' @export
-#'
 #' @examples
 #' x <- c(1, 1, 0, -1, -1, -1,  0,  1)
 #' y <- c(0, 1, 1,  1,  0, -1, -1, -1)
@@ -105,20 +106,20 @@ car_to_deg <- function(x, y) {
   # Ensure the angle is between 0 and 360 degrees
   deg <- (deg + 360) %% 360
 
-  return(deg)
+  deg
 }
 
 
 #' Angle degrees to Cartesian x, y coordinates
 #'
-#' Convert angle degrees to Cartesian coordinates x and y
+#'@description
+#' Convert angle degrees to cartesian coordinates x and y.
 #' It is internally also taking care of the conversion from input angles as degrees to radians
 #'
 #' @param deg a numeric vector of angle degrees
 #' @param r numeric, ray of the unitary circle
 #' @return a tibble with degrees, phi in radians, x and y
 #' @export
-#'
 #' @examples
 #' deg <- c(0, 30, 45, 60, 90, 180, 270, 360)
 #' deg_to_car(deg)
@@ -149,8 +150,8 @@ deg_to_car <- function(deg, r = 1) {
 
 #' Cartesian x, y to angle degrees from the North (compass direction)
 #'
-#' Convert Cartesian coordinates x and y to angle degrees from the North direction, i.e. the compass direction
-#'
+#'@description
+#'Convert cartesian coordinates x and y to angle degrees from the North direction, i.e. the compass direction.
 #' By approaching the problem with the use of complex numbers (strange enough but it's easier!)
 #' If z = x + i*y with real x and y
 #' r = Mod(z) = sqrt(x^2 + y^2)
@@ -194,15 +195,15 @@ car_to_deg_N <- function(x, y) {
   # Ensure the angle is between 0 and 360 degrees
   deg <- deg %% 360
 
-  return(deg)
+  deg
 }
 
 
 #' From angles degrees of North (compass direction) to Cartesian x, y
 #'
+#'@description
 #' Convert from the North direction in angles degrees (i.e. the compass direction) to the cartesian coordinates x and y
-#'#' What is r?
-#' It defines how far the point is from the origin (0,0)
+#' The function is using r as input parameter. What is it? It defines how far the point is from the origin (0,0)
 #' If r = 1 (default), the function converts only the direction (angle) into Cartesian coordinates.
 #' If r > 1, it scales the coordinates proportionally.
 #' If r < 1, it shrinks the coordinates proportionally.
@@ -211,7 +212,6 @@ car_to_deg_N <- function(x, y) {
 #' @param r the radius or magnitude of the vector in the Cartesian coordinate system.
 #' @returns a tibble with degrees, phi in radians, x and y
 #' @export
-#'
 #' @examples
 #' deg_N_to_car(0)     # Expected: (0, 1) -> North
 #' deg_N_to_car(90)    # Expected: (1, 0) -> East
@@ -237,9 +237,3 @@ deg_N_to_car <- function(deg, r = 1) {
   tibble::tibble(deg_N = deg, phi_rad = phi, x = x, y = y)
 
 }
-
-
-
-
-
-

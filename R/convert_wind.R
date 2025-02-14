@@ -1,6 +1,8 @@
-#' wind_deg_to_sect
+#' Convert wind degrees to sectors
 #'
-#' convert wind degrees to sectors
+#' @description
+#' Converts wind degrees measured from North to corresponding wind sectors.
+#' By default are considered 16 wind sectors with each amplitude of 22.5 degrees.
 #'
 #' @param wind_deg numeric vector of wind degrees
 #' @return character vector of wind sectors
@@ -48,9 +50,11 @@ wind_deg_to_sect <- function(wind_deg) {
   return(result)
 }
 
-#' wind_sect_to_deg
+#' Convert wind sectors to degrees
 #'
-#' convert wind sectors to degrees
+#' @description
+#' Converts wind sectors from North to corresponding wind degrees.
+#' By default are considered 16 wind sectors with each amplitude of 22.5 degrees.
 #'
 #' @param wind_sect character vector of wind sectors
 #' @return numeric vector of wind degrees
@@ -95,14 +99,13 @@ wind_sect_to_deg <- function(wind_sect) {
   result[valid_idx] <- lkup_sect[wind_sect[valid_idx]]
 
   # Return the result vector
-  return(result)
+  result
 }
 
-#' convert wind direction and wind speed to u and v components
+#' Convert wind direction and wind speed to u and v components
 #'
 #' @description
-#' this function converts wind direction and wind speed to u and v components
-#'
+#' This function converts wind direction and wind speed to u and v components
 #' Some specifications about the function code.
 #' Why in the code function there is a negative sign in ws?
 #' Because of Wind Direction Convention:
@@ -148,10 +151,10 @@ wdws_to_uv <- function(wd, ws) {
 
 }
 
-#' convert u and v components to wind direction and wind speed
+#' Convert u and v components to wind direction and wind speed
 #'
 #' @description
-#' this function converts u and v components to wind direction and wind speed
+#' This function converts u and v components to wind direction and wind speed
 #'
 #' @param u a vector of u components
 #' @param v a vector of v components

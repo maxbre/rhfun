@@ -15,7 +15,7 @@ deg_to_car(deg, r = 1)
 a tibble with degrees, phi in radians, x and y
 }
 \description{
-Convert angle degrees to Cartesian coordinates x and y
+Convert angle degrees to cartesian coordinates x and y.
 It is internally also taking care of the conversion from input angles as degrees to radians
 }
 \examples{

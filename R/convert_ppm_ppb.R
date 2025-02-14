@@ -1,5 +1,6 @@
 #' ppm to mg/m3
 #'
+#' @description
 #' convert from ppm to mg/m3
 #'
 #' @param ppm numeric vector of volume concentrations in parts per billion (10^-6)
@@ -48,6 +49,7 @@ ppm_to_mgm3 <- function(ppm, mw, temp = 293.15, press = 1013) {
 
 #' mg/m3 to ppm
 #'
+#' @description
 #' convert from mg/m3 to ppm
 #'
 #' @param mgm3 numeric vector of mass concentrations in mg per cubic meter (m^-3)
@@ -96,6 +98,7 @@ mgm3_to_ppm <- function(mgm3, mw, temp = 293.15, press = 1013) {
 
 #' ppb to µg/m3
 #'
+#' @description
 #' convert from ppb to µg/m3
 #'
 #' @param ppb numeric vector of volume concentrations in parts per billion (10^-9)
@@ -144,7 +147,8 @@ ppb_to_ugm3 <- function(ppb, mw, temp = 293.15, press = 1013) {
 
 #' µg/m3 to ppb
 #'
-#' convert from µg/m3 to ppb
+#'@description
+#'convert from µg/m3 to ppb
 #'
 #' @param ugm3 numeric vector of mass concentrations in ug per cubic meter (m^-3)
 #' @param mw molecular weight (g/mol)

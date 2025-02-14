@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # rhfun <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
+
 [![Version](https://img.shields.io/badge/devel%20version-0.0.1-blue.svg)](https://github.com/maxbre/rhfun)
 [![Code size](https://img.shields.io/github/languages/code-size/maxbre/rhfun.svg)](https://github.com/maxbre/rhfun)
 [![Stages](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -23,11 +24,11 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The new collection of my <span style="color: red;">**R**</span> <span style="color: red;">**h**</span>andy <span style="color: red;">**fun**</span>ctions.
+The new collection of my <span style= "color: red">**R**</span> <span style="color: red;">**h**</span>andy <span style="color: red;">**fun**</span>ctions.
 
 Utilities to automate repetitive tasks.
 
-The reboot of an older package with (hopefully!) improvements.
+The reboot of an old package with some improvements(hopefully!).
 
 Beware: all the material must be considered experimental, in full
 development, not yet tested.

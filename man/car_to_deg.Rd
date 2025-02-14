@@ -15,9 +15,8 @@ car_to_deg(x, y)
 a numeric vector of corresponding angle degrees (anticlockwise direction)
 }
 \description{
-Convert Cartesian coordinates x and y to angle degrees
-}
-\details{
+Convert cartesian coordinates x and y to angle degrees.
+
 By approaching the problem with the use of complex numbers (strange enough but it's easier!)
 If z = x + i*y with real x and y
 r = Mod(z) = sqrt(x^2 + y^2)

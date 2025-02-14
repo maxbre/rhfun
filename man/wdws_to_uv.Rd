@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert_wind.R
 \name{wdws_to_uv}
 \alias{wdws_to_uv}
-\title{convert wind direction and wind speed to u and v components}
+\title{Convert wind direction and wind speed to u and v components}
 \usage{
 wdws_to_uv(wd, ws)
 }
@@ -15,8 +15,7 @@ wdws_to_uv(wd, ws)
 a matrix
 }
 \description{
-this function converts wind direction and wind speed to u and v components
-
+This function converts wind direction and wind speed to u and v components
 Some specifications about the function code.
 Why in the code function there is a negative sign in ws?
 Because of Wind Direction Convention:

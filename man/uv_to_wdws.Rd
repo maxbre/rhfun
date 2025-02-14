@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert_wind.R
 \name{uv_to_wdws}
 \alias{uv_to_wdws}
-\title{convert u and v components to wind direction and wind speed}
+\title{Convert u and v components to wind direction and wind speed}
 \usage{
 uv_to_wdws(u, v)
 }
@@ -15,7 +15,7 @@ uv_to_wdws(u, v)
 a matrix
 }
 \description{
-this function converts u and v components to wind direction and wind speed
+This function converts u and v components to wind direction and wind speed
 }
 \examples{
 set.seed(123)

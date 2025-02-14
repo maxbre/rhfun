@@ -15,9 +15,7 @@ car_to_deg_N(x, y)
 a numeric vector of corresponding angle degrees direction from the North (compass direction)
 }
 \description{
-Convert Cartesian coordinates x and y to angle degrees from the North direction, i.e. the compass direction
-}
-\details{
+Convert cartesian coordinates x and y to angle degrees from the North direction, i.e. the compass direction.
 By approaching the problem with the use of complex numbers (strange enough but it's easier!)
 If z = x + i*y with real x and y
 r = Mod(z) = sqrt(x^2 + y^2)

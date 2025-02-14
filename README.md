@@ -15,13 +15,13 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 
 <!-- badges: end -->
 
-The new collection of my <span style="color: red;">**R**</span>
+The new collection of my <span style="color: red">**R**</span>
 <span style="color: red;">**h**</span>andy
 <span style="color: red;">**fun**</span>ctions.
 
 Utilities to automate repetitive tasks.
 
-The reboot of an older package with (hopefully!) improvements.
+The reboot of an old package with some improvements(hopefully!).
 
 Beware: all the material must be considered experimental, in full
 development, not yet tested.

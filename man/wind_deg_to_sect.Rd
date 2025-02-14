@@ -2,7 +2,7 @@
 % Please edit documentation in R/convert_wind.R
 \name{wind_deg_to_sect}
 \alias{wind_deg_to_sect}
-\title{wind_deg_to_sect}
+\title{Convert wind degrees to sectors}
 \usage{
 wind_deg_to_sect(wind_deg)
 }
@@ -13,7 +13,8 @@ wind_deg_to_sect(wind_deg)
 character vector of wind sectors
 }
 \description{
-convert wind degrees to sectors
+Converts wind degrees measured from North to corresponding wind sectors.
+By default are considered 16 wind sectors with each amplitude of 22.5 degrees.
 }
 \examples{
 wind_deg <- c(0, seq(11.25, (360-11.25), by = 22.5), 360)
