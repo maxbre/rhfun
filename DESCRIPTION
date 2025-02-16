@@ -3,8 +3,8 @@ Title: R handy functions: the new collection
 Version: 0.0.1
 Authors@R: 
     person("massimo", "bressan", , "massimo.bressan@arpa.veneto.it", role = c("aut", "cre"))
-Description: A new collection of my handy R functions. The reboot of an
-    old package of mine.
+Description: The new collection of my R handy functions. The reboot of an old (hawful) package of mine, with some improvements (hopefully!).
+    The objective is to make each function "do one thing well" (possibly!). Utilities to automate repetitive tasks (ideally!).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

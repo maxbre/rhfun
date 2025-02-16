@@ -19,7 +19,7 @@ The new collection of my <span style="color: red">**R**</span>
 <span style="color: red;">**h**</span>andy
 <span style="color: red;">**fun**</span>ctions.
 
-The reboot of an old (hawful) package of mine with some improvements
+The reboot of an old (hawful) package of mine, with some improvements
 (hopefully!).
 
 The objective is to make each function “do one thing well” (possibly!).
