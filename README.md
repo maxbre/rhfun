@@ -19,14 +19,17 @@ The new collection of my <span style="color: red">**R**</span>
 <span style="color: red;">**h**</span>andy
 <span style="color: red;">**fun**</span>ctions.
 
-Utilities to automate repetitive tasks.
+The reboot of an old (hawful) package of mine with some improvements
+(hopefully!).
 
-The reboot of an old package with some improvements(hopefully!).
+The objective is to make each function “do one thing well” (possibly!).
 
-Beware: all the material must be considered experimental, in full
-development, not yet tested.
+Utilities to automate repetitive tasks (ideally!).
 
-Caveat emptor: use it at your own risk.
+*Beware: all the material must be considered experimental, in full
+development, not yet tested.*
+
+*Caveat emptor: use it at your own risk.*
 
 ## Installation
 
