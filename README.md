@@ -3,7 +3,9 @@
 
 # rhfun <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
-<!-- badges: start -->
+<!-- badges: start  -->
+
+[![R-CMD-check](https://github.com/maxbre/rhfun/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/maxbre/rhfun/actions/workflows/R-CMD-check.yaml)
 
 [![Version](https://img.shields.io/badge/devel%20version-0.0.1-blue.svg)](https://github.com/maxbre/rhfun)
 [![Code
